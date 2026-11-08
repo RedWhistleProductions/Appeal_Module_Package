@@ -199,3 +199,8 @@ extern "C" void Interpreter(Data_Source *Data)
         if(Module_Debug) std::cout << "\tError: " << Command << " not found in Package Dictionary" << std::endl;
     }
 }
+
+extern "C" void Shutdown()
+{
+    Module.Unload();
+}
